@@ -27,6 +27,6 @@ def save(filename, reservation_list):
     except IOError:
         print('An error occured while saving the file')
 
-my_file = load('./../my_reservations_20240407')
+my_file = load('my_reservations_20240407')
 
 save('my_reservations_20240407.txt', my_file)
