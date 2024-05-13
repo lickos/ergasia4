@@ -12,19 +12,19 @@ quantity = np.array(posotita_energeias)
 
 energy_by_six = energy_prices.reshape(4,6)
 
-print(energy_by_six)
+print('Η παρουσίαση των δεδομένων σε εξάωρη βάση είναι:\n' + str(energy_by_six))
 
-print(np.sum(energy_prices * quantity))
+print('Το συνολικό κόστος είναι: ' + str(np.sum(energy_prices * quantity)))
 
-print(np.sum(posotita_energeias))
+print('Διακινήθηκαν ' + str(np.sum(posotita_energeias)) + ' MWh στην αγορά')
 
-for row in energy_by_six:
-    print('%.2f' % np.min(row))
+for index, row in enumerate(energy_by_six):
+    print('Το εξάωρο ' + str(index + 1) + ' η ελάχιστη τιμή είναι ' + str('%.2f' % np.min(row)))
 
-for row in energy_by_six:
-    print('%.2f' % np.mean(row))
+for index, row in enumerate(energy_by_six):
+    print('Το εξάωρο ' + str(index + 1) + ' η μέση τιμή είναι ' + str( '%.2f' % np.mean(row)))
 
 
 energy_prices_sorted = np.sort(energy_prices)
 
-print(energy_prices_sorted)
+print('Η ταξινομημένες τιμές της ενέργειας είναι: ' + str(energy_prices_sorted))
